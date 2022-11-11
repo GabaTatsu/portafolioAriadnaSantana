@@ -1,0 +1,11 @@
+.presentation {
+  margin-top: 8rem;
+  padding: 4rem;
+  display: flex;
+  gap: 4rem;
+}
+.presentation > section > h4 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}

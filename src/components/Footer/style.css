@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  background-color: grey;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-around;
+  color: white;
+  box-shadow: 0 0 2px 2px inset rgb(66, 66, 66);
+}
+footer a {
+  color: white;
+}

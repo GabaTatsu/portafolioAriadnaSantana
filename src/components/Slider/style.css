@@ -1,0 +1,9 @@
+.slider {
+  overflow: hidden;
+}
+.sliderInner {
+  display: flex;
+}
+.slider img {
+  width: 33.3333%;
+}

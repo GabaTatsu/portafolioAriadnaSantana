@@ -1,0 +1,40 @@
+.listavideos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 4rem;
+  gap: 2rem;
+}
+.listavideos > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.listavideos > li img {
+  max-width: 25rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.listavideos > li div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.listavideos > li:hover img {
+  filter: brightness(50%);
+}
+.listavideos > li:hover div {
+  opacity: 1;
+}

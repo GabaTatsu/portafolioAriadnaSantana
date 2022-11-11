@@ -1,0 +1,44 @@
+.gallerylist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallerylist > ul {
+  padding: 4rem;
+  list-style: none;
+  columns: 4 25rem;
+  gap: 1rem;
+}
+
+.gallerylist > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallerylist > ul > li > button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.gallerylist > ul > li > button img {
+  width: 50%;
+  opacity: 0;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.gallerylist > ul > li > img {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+.gallerylist > ul > li:hover > img {
+  filter: brightness(50%);
+}
+
+.gallerylist > ul > li:hover > button > img {
+  opacity: 1;
+}

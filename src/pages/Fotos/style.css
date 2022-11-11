@@ -1,0 +1,41 @@
+.gallery {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 8rem;
+  justify-content: center;
+}
+.gallery > section img {
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.gallery > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+}
+
+.gallery > section h4 {
+  position: absolute;
+  z-index: 1;
+  margin-top: 21rem;
+  color: white;
+  pointer-events: none;
+  cursor: default;
+}
+
+.gallery > section img:hover {
+  width: 27rem;
+  height: 27rem;
+  filter: brightness(50%);
+}
