@@ -1,21 +1,15 @@
 import "./style.css";
 import zoom from "../../assets/images/zoom.png";
-import { useState } from "react";
-import GallerySlider from "../../components/GallerySlider";
 
-const FotosGallery = ({ data, title }) => {
-  const [slider, setSlider] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
-
+const FotosGallery = ({
+  data,
+  title,
+  setSlider,
+  setImageIndex,
+  setImageGallerySliderData,
+}) => {
   return (
     <article className="gallerylist">
-      {slider && (
-        <GallerySlider
-          data={data}
-          setSlider={setSlider}
-          imageIndex={imageIndex}
-        />
-      )}
       <h2>{title}</h2>
       <ul>
         {data.map((image, index) => {
@@ -26,6 +20,7 @@ const FotosGallery = ({ data, title }) => {
                 onClick={() => {
                   setSlider(true);
                   setImageIndex(index);
+                  setImageGallerySliderData(data);
                 }}
               >
                 <img src={zoom} alt="zoom" />

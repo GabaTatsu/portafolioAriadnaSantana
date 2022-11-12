@@ -11,9 +11,14 @@ import Teatro from "./pages/Teatro";
 import Fotos from "./pages/Fotos";
 import FotosGallery from "./pages/FotosGallery";
 import bookData from "./db/bookData";
+import GallerySlider from "./components/GallerySlider";
 
 function App() {
   const [windowScrollY, setWindowScrollY] = useState("relative");
+  const [slider, setSlider] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
+  const [imageGallerySliderData, setImageGallerySliderData] = useState("");
+
   useEffect(() => {
     const handleScroll = (event) => {
       if (window.scrollY < 130) {
@@ -31,6 +36,13 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+      {slider && (
+        <GallerySlider
+          data={imageGallerySliderData}
+          setSlider={setSlider}
+          imageIndex={imageIndex}
+        />
+      )}
       <Header windowScrollY={windowScrollY} />
       <main>
         <Routes>
@@ -41,7 +53,15 @@ function App() {
           <Route path="/fotos" element={<Fotos />} />
           <Route
             path="/fotos/book"
-            element={<FotosGallery title="BOOK" data={bookData} />}
+            element={
+              <FotosGallery
+                title="BOOK"
+                data={bookData}
+                setSlider={setSlider}
+                setImageGallerySliderData={setImageGallerySliderData}
+                setImageIndex={setImageIndex}
+              />
+            }
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

@@ -1,0 +1,61 @@
+.galleryslider {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+}
+.galleryslider > aside {
+  position: absolute;
+  right: 0;
+  margin: 2rem;
+  z-index: 4;
+}
+
+.galleryslider > aside button {
+  background-color: transparent;
+  border: none;
+  margin: 0.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.galleryslider > aside button:hover {
+  opacity: 1;
+}
+
+.galleryslider > aside img {
+  width: 1rem;
+  height: 1rem;
+  filter: invert();
+}
+.galleryslider > section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.galleryslider > section > img {
+  height: 100vh;
+  padding: 10vh;
+  opacity: 1;
+}
+
+.galleryslider > section > button {
+  background-color: transparent;
+  border: none;
+  filter: invert();
+  opacity: 0.5;
+}
+
+.galleryslider > section > button:hover {
+  opacity: 1;
+}
+
+.galleryslider > section > button > img {
+  width: 5rem;
+}
+
+.galleryslider > section > button:nth-child(1) > img {
+  transform: rotate(180deg);
+}
