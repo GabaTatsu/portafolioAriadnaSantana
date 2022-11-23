@@ -22,7 +22,7 @@ const header = ({ windowScrollY }) => {
               rel="noreferrer"
               href="https://www.youtube.com/channel/UCNSUM8TqclT7vDaZsEFPq1Q"
             >
-              <img width="20px" src={youtubeIcon} alt="Mi canal de Youtube" />
+              <img src={youtubeIcon} alt="Mi canal de Youtube" />
             </a>
           </li>
           <li>
@@ -32,7 +32,7 @@ const header = ({ windowScrollY }) => {
               rel="noreferrer"
               href="https://www.instagram.com/ariadna_santana/?hl=es"
             >
-              <img width="20px" src={instagramIcon} alt="Mi Facebook" />
+              <img src={instagramIcon} alt="Mi Facebook" />
             </a>
           </li>
           <li>
@@ -42,7 +42,7 @@ const header = ({ windowScrollY }) => {
               rel="noreferrer"
               href="https://www.facebook.com/profile.php?id=100035365431992"
             >
-              <img width="20px" src={facebookIcon} alt="Mi Facebook" />
+              <img src={facebookIcon} alt="Mi Facebook" />
             </a>
           </li>
           <li>
@@ -52,7 +52,7 @@ const header = ({ windowScrollY }) => {
               rel="noreferrer"
               href="https://mobile.twitter.com/Ariadna_Santana/with_replies"
             >
-              <img width="20px" src={twitterIcon} alt="Mi Twitter" />
+              <img src={twitterIcon} alt="Mi Twitter" />
             </a>
           </li>
           <li>
@@ -92,10 +92,10 @@ const header = ({ windowScrollY }) => {
           <Link to="/fotos">FOTOS</Link>
         </li>
         <li>
-          <a href="#">CV</a>
+          <Link to="/cv">CV</Link>
         </li>
         <li>
-          <a href="#">CONTACTO</a>
+          <Link to="/contacto">CONTACTO</Link>
         </li>
       </menu>
     </header>

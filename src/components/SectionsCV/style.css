@@ -1,0 +1,16 @@
+.sectionscv {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.sectionscv > li {
+  padding: 1%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.sectionscv > li:nth-child(odd) {
+  background-color: rgb(211, 211, 211);
+}
+.sectionscv > li > h4 {
+  font-size: 1.5rem;
+}

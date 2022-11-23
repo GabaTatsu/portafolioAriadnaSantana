@@ -12,6 +12,8 @@ import Fotos from "./pages/Fotos";
 import FotosGallery from "./pages/FotosGallery";
 import bookData from "./db/bookData";
 import GallerySlider from "./components/GallerySlider";
+import CV from "./pages/CV";
+import Contacto from "./pages/Contacto";
 
 function App() {
   const [windowScrollY, setWindowScrollY] = useState("relative");
@@ -34,6 +36,7 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <BrowserRouter>
       {slider && (
@@ -63,6 +66,8 @@ function App() {
               />
             }
           />
+          <Route path="/cv" element={<CV />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
