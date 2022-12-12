@@ -1,13 +1,18 @@
+import ContactSection from "../ContactSection";
+import Developed from "../Developed";
 import "./style.css";
 
-const Footer = () => {
+const Footer = ({ contactShow }) => {
   return (
     <footer>
-      <p>Representante: María Liaño</p>
-      <a href="http://www.eboracast.com/" target="_blank" rel="noreferrer">
-        www.eboracast.com
-      </a>
-      <a href="mailto: maria@eboracast.com">maria@eboracast.com</a>
+      {contactShow && (
+        <>
+          <h2>CONTACTO</h2>
+          <ContactSection />
+        </>
+      )}
+
+      <Developed />
     </footer>
   );
 };

@@ -1,5 +1,12 @@
 footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+footer > div {
+  margin-top: 2rem;
+  display: flex;
   background-color: grey;
   width: 100%;
   padding: 1rem;
@@ -7,6 +14,7 @@ footer {
   color: white;
   box-shadow: 0 0 2px 2px inset rgb(66, 66, 66);
 }
-footer a {
+footer > div > a {
+  text-decoration: none;
   color: white;
 }

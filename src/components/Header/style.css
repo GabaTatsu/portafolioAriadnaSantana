@@ -8,6 +8,10 @@ header {
   height: 13rem;
 }
 header > menu {
+  width: 100%;
+  z-index: 2;
+}
+header > menu ul {
   display: flex;
   justify-content: space-around;
   background-color: grey;
@@ -15,7 +19,6 @@ header > menu {
   height: 2rem;
   align-items: center;
   box-shadow: 0 0 2px 2px inset rgb(66, 66, 66);
-  z-index: 2;
 }
 
 header > menu a {
@@ -41,16 +44,19 @@ header > section {
   align-items: center;
 }
 
-header nav {
+header nav ul {
   position: absolute;
   right: 3rem;
   display: flex;
   gap: 0.5rem;
 }
+header nav a:hover {
+  opacity: 0.5;
+}
 header > menu a:hover {
   color: rgb(255, 154, 108);
 }
-header > section > nav > li > a > img {
+header > section > nav > ul > li > a > img {
   width: 20px;
   opacity: 0.5;
 }

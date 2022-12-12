@@ -20,6 +20,7 @@ function App() {
   const [slider, setSlider] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
   const [imageGallerySliderData, setImageGallerySliderData] = useState("");
+  const [contactShow, setContactShow] = useState(true);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -46,7 +47,7 @@ function App() {
           imageIndex={imageIndex}
         />
       )}
-      <Header windowScrollY={windowScrollY} />
+      <Header windowScrollY={windowScrollY} setContactShow={setContactShow} />
       <main>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -71,7 +72,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer contactShow={contactShow} />
     </BrowserRouter>
   );
 }
